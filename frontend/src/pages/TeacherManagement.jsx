@@ -313,4 +313,16 @@ const TeacherManagement = () => {
   );
 };
 
-export default TeacherManagement;
+const TeacherPage = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Teacher Page</h1>
+        <p className="mb-4">This is the teacher page for admin role.</p>
+        <a href="/teacher-management" className="text-blue-500 hover:underline">Back to Teacher Management</a>
+      </div>
+    </div>
+  );
+};
+
+export { TeacherManagement, TeacherPage };

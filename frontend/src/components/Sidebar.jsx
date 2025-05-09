@@ -21,6 +21,7 @@ const Sidebar = ({ user }) => {
     { path: '/attendance', label: 'Attendance', icon: '📝', roles: ['teacher'] },
     { path: '/reports', label: 'Reports', icon: '📈', roles: ['teacher', 'admin'] },
     { path: '/students', label: 'Students', icon: '👥', roles: ['admin'] },
+    { path: '/teachers', label: 'Teachers', icon: '🧑‍🏫', roles: ['admin'] },
   ];
 
   const filteredNavItems = navItems.filter(item =>

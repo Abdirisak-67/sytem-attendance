@@ -6,7 +6,7 @@ import Dashboard from './pages/Dashboard';
 import Attendance from './pages/Attendance';
 import Reports from './pages/Reports';
 import StudentManagement from './pages/StudentManagement';
-import TeacherManagement from './pages/TeacherManagement';
+import { TeacherManagement, TeacherPage } from './pages/TeacherManagement';
 import StudentReport from './pages/StudentReport';
 import Sidebar from './components/Sidebar';
 
@@ -77,6 +77,7 @@ function App() {
               <Route path="/reports" element={user?.role === 'teacher' ? <Reports /> : <Navigate to="/" />} />
               <Route path="/students" element={user?.role === 'admin' ? <StudentManagement /> : <Navigate to="/" />} />
               <Route path="/teachers" element={user?.role === 'admin' ? <TeacherManagement /> : <Navigate to="/" />} />
+              <Route path="/teacher-page" element={user?.role === 'admin' ? <TeacherPage /> : <Navigate to="/" />} />
               <Route path="/student/:studentId/report" element={user ? <StudentReport /> : <Navigate to="/login" />} />
             </Routes>
           </main>
